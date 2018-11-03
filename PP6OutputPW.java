@@ -106,7 +106,7 @@ public class PP6OutputPW
          }
          lowerPw.close();   
       }
-      if(nextNum == 2){
+      else if(nextNum == 2){
          counter = 0;
          lineCount = 1;
          while (counter < upperChar.length)
@@ -125,7 +125,7 @@ public class PP6OutputPW
          } 
          upperPw.close();  
       }
-      if(nextNum == 3){
+      else if(nextNum == 3){
          counter = 0;
          lineCount = 1;
          while (counter < mixedChar.length)
@@ -143,11 +143,10 @@ public class PP6OutputPW
             lineCount++;
          } 
          mixedPw.close();  
-      }
+      }  
       
-      
-      
-      mixedPw.close();
-   
+      else{
+         System.out.println("What're you tryna do? Break me?");
+      } 
    }
 }
