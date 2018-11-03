@@ -30,25 +30,44 @@ public class PP6InputPW
       //Creating 1000 ints to represent both uppercase and lower case letters
       PrintWriter Mixed_Letters = new PrintWriter(new File("Mixed_letters.txt"));
       
-      for(int i = 0; i < 1000; i++)
+      for(int i = 0; i < 500; i++)
       {
-         int x = (int)(65 + (57*Math.random()));
+         int x = (int)(97+25*Math.random());
+         int y = (int)(65+25*Math.random());
          
-         if ( (x >= 65 && x <= 90) || (x>=97 && x<=122))
+         if(x >= 97 && x <= 122)
          {
-            Mixed_Letters.println(x);
+         Mixed_Letters.println(x);
          }
-         else
+         if(y >= 65 && y <= 90)
          {
-            x = (int)(65 + (57*Math.random()));
-            if ( (x >= 65 && x <= 90) || (x>=97 && x<=122))
-            {
-               Mixed_Letters.println(x);
-            }
+         Mixed_Letters.println(y);
          }
       }
+      // for(int i = 0; i < 1000; i++)
+//       {
+//          int x = (int)(65 + (57*Math.random()));
+//          
+//          if ( (x >= 65 && x <= 90) || (x>=97 && x<=122) && i < 1000)
+//          {
+//             Mixed_Letters.println(x);
+//          }
+//          else 
+//          {
+//              x = (int)(65 + (57*Math.random()));
+//              if ( (x > 65 && x < 90) || (x>97 && x<122))
+//              {
+//                 Mixed_Letters.println(x);
+//              }
+//              else if( x > 90 && x <97)
+//              {
+//                 Mixed_Letters.println(122 - x);
+//              }
+//          }
+//          
+//          System.out.println(i);
+//       }
       
-      Mixed_Letters.close();
-         
+      Mixed_Letters.close();  
    }
 }
